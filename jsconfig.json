@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "allowSyntheticDefaultImports": false,
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "pwd/*": ["./*"],
+      "~/*": ["src/*"],
+      "API": ["src/utils/axios-api.js"],
+      "Public/*": ["public/*"],
+      "Common/*": ["src/components/Common/*"],
+      "Pages/*": ["src/components/Pages/*"],
+      "Constants": ["src/constants.js"],
+      "Components/*": ["src/components/*"],
+      "RootDuck/*": ["src/duck/*"],
+      "Utils/*": ["src/utils/*"],
+      "TestUtils/*": ["tests/utils/*"],
+      "Data/*": ["data/*"],
+      "Styles/*": ["src/styles/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,69 @@
+{
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "plugins": [
+    "react-hooks"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true,
+        "impliedStrict": false
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "16.8.6"
+    },
+    "import/resolver": {
+      "babel-module": {
+        "pwd": "./",
+        "~": "./src",
+        "Public": "./public/",
+        "API": "./src/utils/axios-api.js",
+        "Constants": "./src/constants.js",
+        "Common": "./src/components/Common",
+        "Pages": "./src/components/Pages",
+        "Components": "./src/components",
+        "RootDuck": "./src/duck",
+        "Utils": "./src/utils",
+        "TestUtils": "./tests/utils/",
+        "Data": "./src/data",
+        "Styles": "./src/styles"
+      }
+    }
+  },
+  "rules": {
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "hrefLeft", "hrefRight", "to" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }],
+    "indent": ["error", 2],
+    "id-length": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "semi": ["error", "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": ["error", {"packageDir": "./"}],
+    "react/jsx-one-expression-per-line": 0,
+    "linebreak-style": 0,
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+          "some": [ "nesting", "id" ]
+      },
+      "allowChildren": false
+    }],
+    "jsx-a11y/media-has-caption": 0,
+    "import/no-webpack-loader-syntax": 0,
+    "allowSyntheticDefaultImports": true
+  }
+}
